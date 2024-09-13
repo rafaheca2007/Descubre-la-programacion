@@ -1,0 +1,6 @@
+void main(){
+  // Orejas
+  ellipse(100,110, 70,70);
+  ellipse(220,100, 70,70);
+  // Cabeza
+}
