@@ -1,0 +1,4 @@
+void PosRaton (){
+  print ("X: " + mouseX);
+  print ("Y: " + mouseY);
+}
