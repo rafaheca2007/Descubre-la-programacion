@@ -3,6 +3,5 @@ void main() {
   rect(120,120, 80,80);
   print ("X: " + mouseX);
    print ("Y: " + mouseY);
-  if (clic 88 a==true);
-  if (x > 200, )
+  if (x > 200)
 }
