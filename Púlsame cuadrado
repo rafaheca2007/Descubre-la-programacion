@@ -1,4 +1,6 @@
-void PosRaton (){
+void main() {
+ 	background(181,0,0);
+  rect(120,120, 80,80);
   print ("X: " + mouseX);
-  print ("Y: " + mouseY);
+   print ("Y: " + mouseY);
 }
