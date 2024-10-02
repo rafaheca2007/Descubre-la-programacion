@@ -1,7 +1,37 @@
+void dibuja() {
+  background(0,0,0);
+  if (mousePressed) {
+    ellipse(mouseX, mouseY, 50,50);
+  }  
+}
+
 void main() {
- 	background(181,0,0);
-  rect(120,120, 80,80);
-  print ("X: " + mouseX);
-   print ("Y: " + mouseY);
-  if (x > 200)
+  animate(dibuja);
+}
+
+int x = 25;
+int y = 25;
+int dx = 1;
+int dy = 1;
+
+void dibujaHorizontal() {
+  background(0,0,0);
+  if (x > 295) dx = -1;
+  if (x < 25) dx = 1;
+  x = x + dx;
+  ellipse(x,y,50,50);
+  if (keyPressed) animate(dibujaVertical);
+}
+
+void dibujaVertical() {
+  background(0,0,0);
+  if (y > 295) dy = -1;
+  if (y < 25) dy = 1;
+  y = y + dy;
+  ellipse(x,y,50,50);
+  if (keyPressed) animate(dibujaHorizontal);
+}
+
+void main() {
+  animate(dibujaHorizontal);
 }
