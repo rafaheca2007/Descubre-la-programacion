@@ -1,5 +1,5 @@
 void dibuja() {
-  background(0,0,0);
+  background(255,0,0);
   if (mousePressed) {
     ellipse(mouseX, mouseY, 50,50);
   }  
@@ -15,7 +15,7 @@ int dx = 1;
 int dy = 1;
 
 void dibujaHorizontal() {
-  background(0,0,0);
+  background(255,0,0);
   if (x > 295) dx = -1;
   if (x < 25) dx = 1;
   x = x + dx;
@@ -24,14 +24,10 @@ void dibujaHorizontal() {
 }
 
 void dibujaVertical() {
-  background(0,0,0);
+  background(255,0,0);
   if (y > 295) dy = -1;
   if (y < 25) dy = 1;
   y = y + dy;
   ellipse(x,y,50,50);
   if (keyPressed) animate(dibujaHorizontal);
-}
-
-void main() {
-  animate(dibujaHorizontal);
 }
