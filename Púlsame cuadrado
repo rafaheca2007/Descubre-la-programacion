@@ -31,3 +31,15 @@ void dibujaVertical() {
   ellipse(x,y,50,50);
   if (keyPressed) animate(dibujaHorizontal);
 }
+
+void draw() {
+  x = new int[N];
+  y = new int[N];
+  radio = new int[N];
+  // Inicialmente no se pintará ningún círculo
+  for ( int i = 0 ; i < N ; i++ ) {
+    radio[i] = -1;
+  }
+  n = 0;
+  animate(draw);
+}
