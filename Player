@@ -13,7 +13,7 @@ void ejecutar (){
 void player(){
   
 background(0,0,0);
-  ellipse(x,y,10,15);
+  ellipse(x,y,30,30);
 }
 void controles(){
   if(keyPressed && key =="up"){
@@ -22,3 +22,19 @@ void controles(){
   }
      
      }
+
+void draw(){
+  background(0, 0, 0);
+  ellipse (x,y, 30, 30);
+	if (x < -130);
+  	x = 0;
+  if (x > 130);
+  	x = 0;
+  if (y < 130);
+  	x = 0;
+  if (y > 130);
+  	x = 0;
+  
+  }
+
+  
