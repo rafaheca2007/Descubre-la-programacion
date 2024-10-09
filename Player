@@ -16,13 +16,13 @@ background(0,0,0);
   ellipse(x,y,30,30);
 }
 void controles(){
-  if(keyPressed && key =="up") {
+  if(y>20 && keyPressed && key =="up") {
     y = y - 3;}
-    if (keyPressed && key =="down"){
+    if (y<20 && keyPressed && key =="down"){
         y = y + 3;}
-    if (keyPressed && key =="left"){
+    if (y>20 && keyPressed && key =="left"){
         x = x - 3;} 
-    if (keyPressed && key =="right"){
+    if (y<20 && keyPressed && key =="right"){
         x = x + 3;}
   
      
