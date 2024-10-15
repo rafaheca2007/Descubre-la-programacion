@@ -1,45 +1,21 @@
-void dibuja() {
-  background(255,0,0);
-  if (mousePressed) {
-    ellipse(mouseX, mouseY, 50,50);
-  }  
+void dibuja(){
+  background(0,0,0);
+    if (mousePressed) {
+      if (mouseButton == LEFTBUTTON){
+        ellipse (mouseX, mouseY, 50, 50);
+      animate (otra);
+      }
+      
+    }
 }
 
-void main() {
+void main(){
   animate(dibuja);
 }
 
-int x = 25;
-int y = 25;
-int dx = 1;
-int dy = 1;
-
-void dibujaHorizontal() {
+void otra(){
   background(255,0,0);
-  if (x > 295) dx = -1;
-  if (x < 25) dx = 1;
-  x = x + dx;
-  ellipse(x,y,50,50);
-  if (keyPressed) animate(dibujaVertical);
-}
-
-void dibujaVertical() {
-  background(255,0,0);
-  if (y > 295) dy = -1;
-  if (y < 25) dy = 1;
-  y = y + dy;
-  ellipse(x,y,50,50);
-  if (keyPressed) animate(dibujaHorizontal);
-}
-
-void draw() {
-  x = new int[N];
-  y = new int[N];
-  radio = new int[N];
-  // Inicialmente no se pintará ningún círculo
-  for ( int i = 0 ; i < N ; i++ ) {
-    radio[i] = -1;
-  }
-  n = 0;
-  animate(draw);
+ text("Hola", 10, 10);
+  if(mouseButton == LEFTBUTTON);
+  animate(dibuja);
 }
