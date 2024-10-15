@@ -1,0 +1,90 @@
+void main(){
+animate(inicio);
+}
+void inicio(){
+image("https://www.elcorreodeburgos.com/cultura/241014/231223/montana-pantalla-grande.html" , 0,0, 320,320);
+stroke(0,0,0);
+  fill(46,17,5);
+  text("COMENZAR JUEGO", 70,140);
+   text("INSTRUCCIONES", 70,200);
+   text("CRÉDITOS", 70,262);
+  noFill();
+rect(40,108,250,50);
+rect(40,170,250,50);
+rect(40,230,250,50);
+button();
+button2();
+button3();
+}
+void button(){
+  println(mouseX);
+  println(mouseY);
+  if (mouseX>41&&mouseX<=289 && mouseY>=230 && mouseY<=279)
+   if (mousePressed)
+     animate(creditos);
+    (println("creditos")
+                        );
+  }
+ 
+  void button2(){
+    println(mouseX);
+    println(mouseY);
+    if (mouseX>40&&mouseX<=290 && mouseY>=170 && mouseY<=220)
+     if (mousePressed)
+      animate(instrucciones);
+      (println("instrucciones")
+       );
+   
+  }
+
+void button3(){
+  println (mouseX);
+  println (mouseY);
+  if (mouseX>40&&mouseX<=288 && mouseY>=108 &&  mouseY<=157)
+    if (mousePressed);
+    animate(comenzar);
+  (println("comenzar")
+  );
+}
+void button4(){
+  println (mouseX);
+  println (mouseY);
+  if (mouseX>18&&mouseX<=107 && mouseY>=25 &&  mouseY<=65)
+    if (mousePressed);
+    animate(inicio);
+  (println("inicio")
+  );
+}
+
+void creditos(){
+   stroke(255,255,255);
+  noFill();
+  image("https://spaceplace.nasa.gov/galaxy/sp/webb-first-deep-field.sp.jpg",0,0,320,320);
+  rect(17,25,90,40);
+  fill(255,253,253);
+  text("Salir", 43, 52);
+  noFill();
+   button4();
+ 
+}
+void instrucciones(){
+  stroke(255,255,255);
+  noFill();
+  image("https://media.istockphoto.com/id/1195199589/es/foto/nave-espacial-azul-oscuro-interior-futurista-con-vista-de-ventana-en-el-planeta-tierra-3d.jpg?s=612x612&w=0&k=20&c=srVSgfDR2gxTZrBqE7InXTwF4xFRfK_fkeujKmXGdV4=", 0,0,320,320);
+  rect(17,25,90,40);
+  fill(255,255,255);
+  text("Salir", 43, 52);
+  noFill();
+    button4();
+}
+void comenzar(){
+   stroke(255,255,255);
+  noFill();
+  image("https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg", 0,0,320,320);
+   rect(17,25,90,40);
+  noFill();
+  fill(255,255,255);
+  text("Salir", 43, 52);
+  noFill();
+        button4();
+}
