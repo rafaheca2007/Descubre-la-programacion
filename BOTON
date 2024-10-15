@@ -15,7 +15,6 @@ void main(){
 
 void otra(){
   background(255,0,0);
- text("Hola", 10, 10);
-  if(mouseButton == LEFTBUTTON);
+  if(mouseButton == RIGHTBUTTON);
   animate(dibuja);
 }
