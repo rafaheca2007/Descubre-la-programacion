@@ -2,7 +2,7 @@ void main(){
 animate(inicio);
 }
 void inicio(){
-image("https://s1.significados.com/foto/earth-11015-1920-41.jpg?class=article" , 0,0, 320,320);
+image("https://img.freepik.com/foto-gratis/cielo-al-atardecer_1203-1666.jpg", 0,0, 320,320);
 stroke(0,0,0);
   fill(46,17,5);
   text("INICIO", 70,140);
