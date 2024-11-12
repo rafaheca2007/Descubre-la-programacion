@@ -1,1 +1,13 @@
+void main(){
+  animate(player);
+}
 
+void player(){
+  background(0,0,0,1);
+  fill(32,19,19);
+ 	ellipse(1600,10,10);
+}
+
+void movimientos(){
+ image("https://static.vecteezy.com/system/resources/thumbnails/021/115/771/small/white-circle-free-png.png",0, 320);
+}
