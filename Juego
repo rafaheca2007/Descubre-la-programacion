@@ -3,11 +3,24 @@ void main(){
 }
 
 void player(){
-  background(0,0,0,1);
-  fill(32,19,19);
- 	ellipse(1600,10,10);
+  image("https://wallpapers.com/images/hd/flappy-bird-background-fm9i1lcfjh7ikkcw.jpg",0,0, 320,320);
+  image("https://mir-s3-cdn-cf.behance.net/projects/404/b9ad4b206551589.Y3JvcCwyMTYwLDE2ODksMCwyNDU.jpg",20,120, 50,50);
 }
 
-void movimientos(){
- image("https://static.vecteezy.com/system/resources/thumbnails/021/115/771/small/white-circle-free-png.png",0, 320);
+void dibuja() {
+   
+}
+
+void movimiento(){
+  background(0,0,0);
+  if (keyPressed) {
+    text(key, 100,100);
+} 
+
+void juego(){
+  
+}
+
+void puntos(){
+  
 }
