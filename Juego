@@ -1,26 +1,27 @@
+int Jugar = 1; ;
+int Repinta = 1;
+int Tamano = 35;
+int Puntos = 0;
+int PosX = 0;
+int PosY = 0;
+
 void main(){
-  animate(player);
-}
-
-void player(){
-  image("https://wallpapers.com/images/hd/flappy-bird-background-fm9i1lcfjh7ikkcw.jpg",0,0, 320,320);
-  image("https://mir-s3-cdn-cf.behance.net/projects/404/b9ad4b206551589.Y3JvcCwyMTYwLDE2ODksMCwyNDU.jpg",20,120, 50,50);
-}
-
-void dibuja() {
-   
-}
-
-void movimiento(){
+  size(800,600);
   background(0,0,0);
-  if (keyPressed) {
-    text(key, 100,100);
-} 
-
-void juego(){
-  
 }
 
-void puntos(){
-  
+void draw(){
+  if((Jugar == 1) && (Repinta == 1));
 }
+
+void elemento(){
+  background(0,0,0);
+  for(int i = 0; i<=Puntos; i++)
+    {
+			fill(25,25,25);
+    	ellipse(50,750, 300,20);
+      ellipse(50,750, 300,20); 
+
+  }
+}
+
