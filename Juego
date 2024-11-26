@@ -1,15 +1,110 @@
-int Jugar = 1; ;
+void main(){
+animate(inicio);
+}
+void inicio(){
+image("https://img.freepik.com/foto-gratis/cielo-al-atardecer_1203-1666.jpg", 0,0, 320,320);
+stroke(0,0,0);
+  fill(46,17,5);
+  text("INICIO", 70,140);
+   text("INSTRUCCIONES", 70,200);
+   text("CRÉDITOS", 70,262);
+   fill(8,50,124);
+  	text("USER2024",90,90);
+  noFill();
+rect(40,108,250,50);
+rect(40,170,250,50);
+rect(40,230,250,50);
+
+button();
+button2();
+button3();
+}
+void button(){
+  println(mouseX);
+  println(mouseY);
+  if (mouseX>41&&mouseX<=289 && mouseY>=230 && mouseY<=279)
+   if (mousePressed)
+     animate(creditos);
+    (println("creditos")
+                        );
+  }
+ 
+  void button2(){
+    println(mouseX);
+    println(mouseY);
+    if (mouseX>40&&mouseX<=290 && mouseY>=170 && mouseY<=220)
+     if (mousePressed)
+      animate(instrucciones);
+      (println("instrucciones")
+       );
+   
+  }
+
+void button3(){
+  println (mouseX);
+  println (mouseY);
+  if (mouseX>40&&mouseX<=288 && mouseY>=108 &&  mouseY<=157)
+    if (mousePressed);
+    animate(comenzar);
+  (println("comenzar")
+  );
+}
+void button4(){
+  println (mouseX);
+  println (mouseY);
+  if (mouseX>18&&mouseX<=107 && mouseY>=25 &&  mouseY<=65)
+    if (mousePressed);
+    animate(inicio);
+  (println("inicio")
+  );
+}
+
+void creditos(){
+   stroke(255,255,255);
+  noFill();
+  image("https://cdn.pixabay.com/photo/2020/06/25/02/13/landscape-5338211_1280.jpg",0,0,320,320);
+  rect(17,25,90,40);
+  fill(255,253,253);
+  text("Salir", 43, 52);
+  fill(8,50,124);
+    text("USER2024",140, 160);
+  noFill();
+   button4();
+ 
+}
+void instrucciones(){
+  stroke(255,255,255);
+  noFill();
+  image("https://ecosiglos.com/wp-content/uploads/2019/09/bosque-templado-con-cascada.jpg", 0,0,320,320);
+  rect(17,25,90,40);
+  fill(8,50,124);
+  text("Salir", 43, 52);
+     text("Solamente se utiliza el raton y el click izquierdo",140, 160);
+  noFill();
+    button4();
+}
+void comenzar(){
+   stroke(255,255,255);
+  noFill();
+  image("https://images.ecestaticos.com/q-_mvLjIwfZxa14YcQ5HaJ9TMRo=/0x0:612x417/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Ff15%2Fd3f%2F069%2Ff15d3f069e0b0b1debd09c67b25f71ab.jpg", 0,0,320,320);
+   rect(17,25,90,40);
+  noFill();
+  fill(255,255,255);
+  text("Salir", 43, 52);
+    fill(8,50,124);
+    text("USER2024",140, 160);
+  noFill();
+        button4();
+}int Jugar = 1; ;
 int Repinta = 1;
 int Tamano = 35;
 int Puntos = 0;
 int PosX = 0;
 int PosY = 0;
 
-void main(){
-  size(800,600);
-  background(0,0,0);
+void pantalla(){
+image("http://upload.wikimedia.org/wikipedia/commons/e/e5/Cherry-blosom-draw-background-semiflowers-8.gif", 0,0, 320,320);
 }
-
 void draw(){
   if((Jugar == 1) && (Repinta == 1));
 }
@@ -21,7 +116,39 @@ void elemento(){
 			fill(25,25,25);
     	ellipse(50,750, 300,20);
       ellipse(50,750, 300,20); 
+posX = floor(random(50,750));
+posY = floor(random(100,550));
+  fill(255,0,0);
+   ellipse(posX, posY, Tamano, Tamano);  
 
   }
 }
 
+void puntos(){
+  fill(255,0,0);
+  textSize(18);
+  text("PUNTOS: " + (Puntos), 250, 30);
+}
+
+void tiempo(){
+   fill(255,0,0);
+  textSize(18);
+  text("TIEMPO:" + millis()/1000, 20, 30);
+}
+
+void raton(){
+  if(Jugar = 1){
+    if(Repinta = 0){
+      Repinta = 1;{
+        if(mouseX > posX-tamano);{
+          if(mouseX < posX+tamano);{
+            if(mouseY > posY-tamano);{
+              if(mouseY < posY+tamano); 
+      }
+    }
+  }
+}
+
+void death(){
+
+}
