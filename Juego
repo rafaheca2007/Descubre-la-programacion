@@ -7,14 +7,8 @@ int PosY = 0;
 
 void main(){
     textSize(20);
-  background(0,0,0);
-  if (mousePressed) {
-    if (mouseButton == RIGHTBUTTON) {
-    	ellipse(mouseX, mouseY, 50,50);
-    }
-  }  
+	 image("https://cdn.pixabay.com/photo/2013/02/21/19/10/grass-84622_1280.jpg", 0,0, 320,320);
 }
-
 void draw(){
   if(( Jugar == 1) && (Repinta == 1)){
     DibujarFormas();
@@ -22,21 +16,25 @@ void draw(){
 }
 
 void DibujarFormas(){
-  background(0,0,0);
+	 image("https://cdn.pixabay.com/photo/2013/02/21/19/10/grass-84622_1280.jpg", 0,0, 320,320);
  for(int i= 0; i<=Puntos; i++){
-   fill(floor(random(50,250)), floor(random(0,255)), floor(random(0,255)));
-   ellipse(floor(random(50,750)), floor(random(150,250)), Tamano,Tamano);
-
+	 image("https://cdn.pixabay.com/photo/2013/02/21/19/10/grass-84622_1280.jpg", 0,0, 320,320);
+   ellipse(50,50, 30,30);
+      ellipse(80,90, 30, 30);
+			ellipse(100,30, 30,30);
+   		ellipse(300,60, 30,30);
+   		ellipse(40,70, 30,30);
+   		ellipse(60,65, 30,30);
  }
-  PosX = floor(random(50,250));
-  PosY = floor(random(150,250));
-  fill(255,0,0);
+  PosX = (PosX-25);
+  PosY = (PosY-25);
+  fill(193,112,112);
   textSize(18);
   text("TIEMPO:" + millis()/1000, 20, 30);
   Repinta =0;
 }
 
-void mouseClicked(){
+void raton(){
   if(Jugar == 1){
    if(Repinta == 0){
      Repinta = 1;
@@ -44,11 +42,13 @@ void mouseClicked(){
     if((mouseX > PosX-Tamano) && (mouseX < PosX+Tamano) && (mouseY > PosY-Tamano) && (mouseY < PosY+Tamano)){
       Puntos+=1;
     }
-     else{
-       Jugar=0;
-       fill(255,0,0);
-       textSize(18);
-       text("GAME OVER: " + Puntos + " en " +millis()/1000 + " segs ", 20, 30);
      }
   }
+void muerte(){
+  if{Jugar == 0);
+       image("https://srv.latostadora.com/image/juego-terminado-grim-reaper--id:139ebcd9-893d-4829-844b-b7347ff09a53;s:D_C1;b:f1f1f1;h:320;f:f;i:135623432743001356232114321.jpg", 0,0 320,320);
+       textSize(18);
+       text("GAME OVER: " + Puntos + " en " +millis()/1000 + " segs ", 20, 30);
+       
 }
+  
