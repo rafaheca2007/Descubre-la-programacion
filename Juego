@@ -1,7 +1,18 @@
 void main(){
-  animate(dibujar);
+	animate(dibujar);
 }
 
 void dibujar(){
-  
+  fill(207,239,4);
+  ellipse(140,140, 20,20);
 }
+
+void pantalla(){
+image("", 0,0, 320,320);
+  rect()
+}
+
+void tubos(){
+  double x = random(3)
+}
+  
