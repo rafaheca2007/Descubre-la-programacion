@@ -8,11 +8,14 @@ void dibujar(){
 }
 
 void pantalla(){
-image("", 0,0, 320,320);
-  rect()
+image("https://ikimiuki.com/wp-content/uploads/2020/09/flappyg3.png", 0,0, 320,320);
 }
 
 void tubos(){
-  double x = random(3)
+  double x = random(320);
+  double y = random(320);
+  double escala = 1;
+  int grosorTubos = round (2*escala);
+  fill(69,237,12);
+    rect()
 }
-  
