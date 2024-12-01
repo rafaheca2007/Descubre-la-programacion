@@ -1,21 +1,205 @@
+int bolaX;
+int bolaY;
+int vX;
+int vY;
+int scoreE;
+int scoreP;
+
+int palaY;
+int palaV;
+
 void main(){
-	animate(dibujar);
+animate(inicio);
+}
+void inicio(){
+image("https://img.freepik.com/foto-gratis/cielo-al-atardecer_1203-1666.jpg", 0,0, 320,320);
+stroke(0,0,0);
+  fill(46,17,5);
+  text("INICIO", 70,140);
+   text("INSTRUCCIONES", 70,200);
+   text("CRÉDITOS", 70,262);
+   fill(8,50,124);
+  noFill();
+rect(40,108,250,50);
+rect(40,170,250,50);
+rect(40,230,250,50);
+
+button();
+button2();
+button3();
+}
+void button(){
+  println(mouseX);
+  println(mouseY);
+  if (mouseX>41&&mouseX<=289 && mouseY>=230 && mouseY<=279)
+   if (mousePressed)
+     animate(creditos);
+    (println("creditos")
+                        );
+  }
+ 
+  void button2(){
+    println(mouseX);
+    println(mouseY);
+    if (mouseX>40&&mouseX<=290 && mouseY>=170 && mouseY<=220)
+     if (mousePressed)
+      animate(instrucciones);
+      (println("instrucciones")
+       );
+   
+  }
+
+void button3(){
+  println (mouseX);
+  println (mouseY);
+  if (mouseX>40&&mouseX<=288 && mouseY>=108 &&  mouseY<=157)
+    if (mousePressed);
+    animate(comenzar);
+  (println("comenzar")
+  );
+}
+void button4(){
+  println (mouseX);
+  println (mouseY);
+  if (mouseX>18&&mouseX<=107 && mouseY>=25 &&  mouseY<=65)
+    if (mousePressed);
+    animate(inicio);
+  (println("inicio")
+  );
 }
 
-void dibujar(){
-  fill(207,239,4);
-  ellipse(140,140, 20,20);
+void creditos(){
+   stroke(255,255,255);
+  noFill();
+  image("https://cdn.pixabay.com/photo/2020/06/25/02/13/landscape-5338211_1280.jpg",0,0,320,320);
+  rect(17,25,90,40);
+  fill(255,253,253);
+  text("Salir", 43, 52);
+  fill(8,50,124);
+    text("USER2024",140, 160);
+  noFill();
+   button4();
+ 
+}
+void instrucciones(){
+  stroke(255,255,255);
+  noFill();
+  image("https://static4.depositphotos.com/1000899/276/i/450/depositphotos_2769361-stock-photo-do-not-disturb-i-read.jpg", 0,0,320,320);
+  rect(17,25,90,40);
+  fill(0,0,0);
+  text("Salir", 43, 52);
+  textSize(9);
+     text("Utilizar el raton y se inicia con ratón",10, 30);
+  noFill();
+    button4();
+}
+void comenzar(){
+   stroke(255,255,255);
+  noFill();
+  image("https://images.ecestaticos.com/q-_mvLjIwfZxa14YcQ5HaJ9TMRo=/0x0:612x417/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Ff15%2Fd3f%2F069%2Ff15d3f069e0b0b1debd09c67b25f71ab.jpg", 0,0,320,320);
+   rect(17,25,90,40);
+  noFill();
+  fill(255,255,255);
+  text("Salir", 43, 52);
+    fill(8,50,124);
+    text("USER2024",140, 160);
+  noFill();
+        button4();
+
+  bolaX = 160;
+  bolaY = 200;
+  
+  vX = 10;
+  vY = 10;
+  
+  palaY = 160;
+  palaV = 5;
+  
+  animate(draw_inicio);
 }
 
-void pantalla(){
-image("https://ikimiuki.com/wp-content/uploads/2020/09/flappyg3.png", 0,0, 320,320);
+void draw_inicio() {
+  background(72,70,167);
+  
+  fill(0,249,255);
+  
+  textSize(50);
+  text("TENIS", 60, 80);
+  
+  textSize(20);
+  text(scoreE + " - " + scoreP, 140, 160);
+  if (keyPressed) {
+    if (key == " ") {
+      animate(draw_juego);
+    }
+  }
 }
 
-void tubos(){
-  double x = random(320);
-  double y = random(320);
-  double escala = 1;
-  int grosorTubos = round (2*escala);
-  fill(69,237,12);
-    rect()
+void draw_juego() {
+  background(24,0,70);
+  
+  fill(255,255,255);
+  rect(20, palaY - 50, 20, 100);
+  
+  fill(29,255,0);
+  rect(280, mouseY - 50, 20, 100);
+  
+  fill(221,255,0);
+  ellipse(bolaX, bolaY, 20, 20);
+  
+  bolaX = bolaX + vX;
+  
+  if (bolaX + 10 >= 280) {
+    vX = -10;
+    
+    if (bolaY <= mouseY - 50 || bolaY >= mouseY + 50) {
+      bolaX = 160;
+      bolaY = 160;
+     image("https://media.licdn.com/dms/image/v2/D4E12AQHTLZkUwsdXnw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1669216728314?e=2147483647&v=beta&t=tCI8IQeCLByEwzG5e-GuZ10ySS6Ih3FLhb7iUV0AfyI", 0,0, 320,320);
+      scoreE = scoreE + 1;
+      animate(draw_inicio);
+    }
+  }
+  
+  if (bolaX - 10 <= 40) {
+    vX = 10;
+    
+    if (bolaY <= palaY - 50 || bolaY >= palaY + 50) {
+      bolaX = 160;
+      bolaY = 160;
+      
+      scoreP = scoreP + 1;
+      animate(draw_inicio);
+    }
+  }
+  
+  bolaY = bolaY + vY;
+  
+  if (bolaY + 10 >= 320) {
+    vY = -10;
+    image("https://i.pinimg.com/736x/09/2f/0c/092f0c487ebe91a2a3a500cdde782320.jpg", 0,0, 320,320);
+  }
+  
+  if (bolaY - 10 <= 0) {
+    vY = 10;
+  }
+  
+  palaY = palaY + palaV;
+  
+  if (palaY < bolaY) {
+    palaV = palaV + 4;
+  }
+  
+  if (palaY > bolaY) {
+    palaV = palaV - 4;
+  }
+  
+  if (palaV > 20) {
+    palaV = 20;
+  }
+  
+  if (palaV < -20) {
+    palaV = -20;
+  }
 }
+
